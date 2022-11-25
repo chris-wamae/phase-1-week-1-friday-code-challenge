@@ -36,14 +36,15 @@ function speedLimitDetector(speed) {
     else if (speed < 0) {
     return "Speed cannot be less than 0";
   }
-   
+
     else if (speed > 70) {
     function demeriter() {
       let overSpeed;
       overSpeed = (speed - 70) / 5;
       let demeritPoints;
       demeritPoints = Math.ceil(overSpeed);
-      return demeritPoints;
+      if(demeritPoints >= 12)
+      {return `You have accumulated ${demeritPoints} demerit points,your license is now suspended`}
     }
   }
   return demeriter();
