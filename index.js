@@ -45,3 +45,29 @@ function speedLimitDetector(speed) {
     return demeriter();
   }
 }
+
+//Net Salary Calculator 
+//calculate Net Salary
+//calaculate tax,nhif,nssf and substract them from Gross salary
+
+/*nssf 
+6% of earnings with a maximum of 1080
+
+//Tax/PAYE
+calculated after nssf duduction
+10% upto 24,000
+25% for 24,001 - 32,333 
+30% above 32,333
+personal relief = 2400
+//nhif
+calculated as a flat amount depending on the amount one earns
+*/
+function netSalaryCalculator(grossPay)
+{
+ let nssfAmount;
+ if(grossPay * 0.06 > 1080)
+ {nssfAmount = 1080}
+ else
+ {nssfAmount = grossPay * 0.06}
+ return nssfAmount
+}
