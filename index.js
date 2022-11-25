@@ -6,8 +6,14 @@
 // D - 40 to 49,
 // E - less 40,
 
-function inputScore(studentScore)
-{
-if(studentScore >= 0 && studentScore <= 100 && studentScore >= 79)
-{console.log("GradeA")}
+function inputScore(studentScore) {
+    if (studentScore >= 0 && studentScore <= 100) {
+        return grader();
+      }
+    else{ return "Please input a valid score between 0 and 100"}
+  function grader(grade) {
+   
+  }
+
+ 
 }
