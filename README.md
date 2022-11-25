@@ -1,0 +1,1 @@
+To use the Student Grade Generator please type inputScore() into the console and input an integer between the brackets
