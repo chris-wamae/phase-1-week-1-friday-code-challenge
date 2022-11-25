@@ -12,7 +12,11 @@ function inputScore(studentScore) {
       }
     else{ return "Please input a valid score between 0 and 100"}
   function grader(grade) {
+    if (studentScore < 40) {
+      grade = "E";
+    }
    
+    return `For a score of ${studentScore}, your grade is ${grade}`;
   }
 
  
