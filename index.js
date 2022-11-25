@@ -44,8 +44,10 @@ function speedLimitDetector(speed) {
       let demeritPoints;
       demeritPoints = Math.ceil(overSpeed);
       if(demeritPoints >= 12)
-      {return `You have accumulated ${demeritPoints} demerit points,your license is now suspended`}
-    }
+      {return `You've accumulated ${demeritPoints} demerit points, your license is now suspended`}
+    else if(demeritPoints <=11)
+    {return `You've accumulated ${demeritPoints} demerit points, you are ${12 - demeritPoints} points away from license suspension`}
   }
   return demeriter();
+}
 }
