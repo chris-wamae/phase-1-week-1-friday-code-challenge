@@ -28,9 +28,23 @@ function inputScore(studentScore) {
 //every 5 km/s above the speed limit (70)
 //one demerit point and print the total number of demerit points.
 //more than 12 points, the function should print: “License suspended”
-function speedLimitDetector(speed)
-{if(speed >= 0 && speed <= 70){
- return "Ok"} 
- else if(speed < 0)
-{return "Speed cannot be less than 0"}
+function speedLimitDetector(speed) {
+  if (speed >= 0 && speed <= 70) {
+    return "Ok";
+  }
+
+    else if (speed < 0) {
+    return "Speed cannot be less than 0";
+  }
+   
+    else if (speed > 70) {
+    function demeriter() {
+      let overSpeed;
+      overSpeed = (speed - 70) / 5;
+      let demeritPoints;
+      demeritPoints = Math.ceil(overSpeed);
+      return demeritPoints;
+    }
+  }
+  return demeriter();
 }
