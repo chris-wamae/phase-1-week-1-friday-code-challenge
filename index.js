@@ -23,31 +23,25 @@ function inputScore(studentScore) {
 }
 
 //Challenge 2: Speed Detector
-//a program that takes as input the speed
-//less than 70, it should print “Ok”
-//every 5 km/s above the speed limit (70)
-//one demerit point and print the total number of demerit points.
-//more than 12 points, the function should print: “License suspended”
 function speedLimitDetector(speed) {
   if (speed >= 0 && speed <= 70) {
     return "Ok";
-  }
-
-    else if (speed < 0) {
+  } else if (speed < 0) {
     return "Speed cannot be less than 0";
-  }
-
-    else if (speed > 70) {
+  } else if (speed > 70) {
     function demeriter() {
       let overSpeed;
       overSpeed = (speed - 70) / 5;
       let demeritPoints;
       demeritPoints = Math.ceil(overSpeed);
-      if(demeritPoints >= 12)
-      {return `You've accumulated ${demeritPoints} demerit points, your license is now suspended`}
-    else if(demeritPoints <=11)
-    {return `You've accumulated ${demeritPoints} demerit points, you are ${12 - demeritPoints} points away from license suspension`}
+      if (demeritPoints >= 12) {
+        return `You've accumulated ${demeritPoints} demerit points, your license is now suspended`;
+      } else if (demeritPoints <= 11) {
+        return `You've accumulated ${demeritPoints} demerit points, you are ${
+          12 - demeritPoints
+        } points away from license suspension`;
+      }
+    }
+    return demeriter();
   }
-  return demeriter();
-}
 }
