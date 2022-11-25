@@ -21,3 +21,16 @@ function inputScore(studentScore) {
     return `For a score of ${studentScore}, your grade is ${grade}`;
   }
 }
+
+//Challenge 2: Speed Detector
+//a program that takes as input the speed
+//less than 70, it should print “Ok”
+//every 5 km/s above the speed limit (70)
+//one demerit point and print the total number of demerit points.
+//more than 12 points, the function should print: “License suspended”
+function speedLimitDetector(speed)
+{if(speed >= 0 && speed <= 70){
+ return "Ok"} 
+ else if(speed < 0)
+{return "Speed cannot be less than 0"}
+}
