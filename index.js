@@ -23,6 +23,9 @@ function inputScore(studentScore) {
 
     else if(studentScore >=60 && studentScore <= 79)
     {grade = "B"}
+
+    else if(studentScore >= 80)
+    {grade = "A"}
      
     return `For a score of ${studentScore}, your grade is ${grade}`;
   }
