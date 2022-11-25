@@ -1,1 +1,3 @@
 To use the Student Grade Generator please type inputScore() into the console and input an integer between the brackets
+
+Note: In the Speed Detector program I have implimented a bracket system for demeriter points such that the return value for demeriter points is always an interger. For example, a speed input of 71 should return 0.2 demeriter points and a speed of 74 should return 0.8 but they both return 1 demeriter point.
