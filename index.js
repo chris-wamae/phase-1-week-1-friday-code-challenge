@@ -15,7 +15,10 @@ function inputScore(studentScore) {
     if (studentScore < 40) {
       grade = "E";
     }
-   
+    
+    else if(studentScore >= 40 && studentScore <= 49 )
+    {grade = "D"}
+
     return `For a score of ${studentScore}, your grade is ${grade}`;
   }
 
