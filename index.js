@@ -46,7 +46,7 @@ function speedLimitDetector(speed) {
   }
 }
 
-//Net Salary Calculator 
+//Net Salary Calculator
 //calculate Net Salary
 //calaculate tax,nhif,nssf and substract them from Gross salary
 
@@ -62,12 +62,56 @@ personal relief = 2400
 //nhif
 calculated as a flat amount depending on the amount one earns
 */
-function netSalaryCalculator(grossPay)
-{
- let nssfAmount;
- if(grossPay * 0.06 > 1080)
- {nssfAmount = 1080}
- else
- {nssfAmount = grossPay * 0.06}
- return nssfAmount
-}
+function netSalaryCalculator(basicSalary,benefits=0) {
+  let grossPay;
+  grossPay = basicSalary + benefits
+  let nssfAmount;
+  if (grossPay * 0.06 > 1080) {
+    nssfAmount = 1080;
+  } else {
+    nssfAmount = grossPay * 0.06;
+  }
+  let postNssf;
+  postNssf = grossPay - nssfAmount;
+
+  let tierOneRemainder;
+  let payeTierOne;
+  let tierTwoRemainder;
+  let payeTierTwo;
+  let tierThreeRemainder;
+  let payeTierThree;
+
+  payeTierOne = postNssf * 0.1;
+  console.log(payeTierOne);
+  if (payeTierOne <= 2400) {
+    tierOneRemainder = postNssf;
+  } else {
+    tierOneRemainder = postNssf + 2400 - postNssf * 0.1;
+  }
+  console.log(tierOneRemainder);
+
+  if (postNssf >= 24001) {
+     if(tierOneRemainder - 24000 <= 32333){
+      payeTierTwo = (tierOneRemainder - 24000) * 0.25}
+    else{
+      payeTierTwo = ((tierOneRemainder - 24000) -(tierOneRemainder - 32333)) * 0.25
+    }
+
+   tierTwoRemainder = tierOneRemainder - payeTierTwo
+
+     }
+   
+  if (postNssf >= 32333)
+  { payeTierThree = (tierTwoRemainder - 32333) * 0.3
+    tierThreeRemainder = tierTwoRemainder - payeTierThree}
+
+  function returnSelector() {
+    if (postNssf <= 24000) return tierOneRemainder;
+
+    if (postNssf >= 24001 && postNssf <= 32333) return tierTwoRemainder;
+
+    if(postNssf >= 32334) return tierThreeRemainder}
+  
+
+  return returnSelector();
+  }
