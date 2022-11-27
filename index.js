@@ -76,7 +76,7 @@ function netSalaryCalculator(basicSalary, benefits = 0)
 {
   let grossPay;
   grossPay = basicSalary + benefits;
-  console.log(`${grossPay} is the grossPay amount`);
+  console.log(`${grossPay} is the gross pay amount`);
 //This if else statement calclates the nssf amount and deducts it 
 //returning the remainder
   let nssfAmount;
@@ -88,7 +88,7 @@ function netSalaryCalculator(basicSalary, benefits = 0)
   let postNssf;
   postNssf = grossPay - nssfAmount;
   console.log(`${nssfAmount} is the nssf amount`);
-  console.log(`${postNssf} is the post nssf amount`);
+  //console.log(`${postNssf} is the post nssf amount`);
 
   let tierOneRemainder;
   let payeTierOne;
@@ -99,13 +99,13 @@ function netSalaryCalculator(basicSalary, benefits = 0)
 
 //calculates paye for the first tax bracket 
   payeTierOne = postNssf * 0.1;
-  console.log(`${payeTierOne} is first tax bracket tax amount`);
+  // console.log(`${payeTierOne} is first tax bracket tax amount`);
   if (payeTierOne <= 2400) {
     tierOneRemainder = postNssf;
   } else {
     tierOneRemainder = postNssf + 2400 - postNssf * 0.1;
   }
-  console.log(`${tierOneRemainder} is the first tax bracket return amount`);
+  //console.log(`${tierOneRemainder} is the first tax bracket return amount`);
 
 //calculates paye for the second tax bracket
   if (postNssf >= 24001) {
@@ -118,15 +118,15 @@ function netSalaryCalculator(basicSalary, benefits = 0)
 
     tierTwoRemainder = tierOneRemainder - payeTierTwo;
   }
-  console.log(`${payeTierTwo} is the second tax bracket tax amount`);
-  console.log(`${tierTwoRemainder} is the second tax bracket return amount`);
+ // console.log(`${payeTierTwo} is the second tax bracket tax amount`);
+ // console.log(`${tierTwoRemainder} is the second tax bracket return amount`);
 
   //calculates paye for the third tax bracket
   if (postNssf >= 32333) {
     payeTierThree = (tierTwoRemainder - 32333) * 0.3;
     tierThreeRemainder = tierTwoRemainder - payeTierThree;
   }
-  console.log(`${payeTierThree} is the  third tax bracket return amount`);
+//  console.log(`${payeTierThree} is the  third tax bracket return amount`);
 
   //calculates nhif amount depending on the grossPay
   let nhifDeduction;
