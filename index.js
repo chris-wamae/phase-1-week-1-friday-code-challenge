@@ -62,7 +62,7 @@ personal relief = 2400
 //nhif
 calculated as a flat amount depending on the amount one earns
 */
-function netSalaryCalculator(basicSalary,benefits=0) {
+function netSalaryCalculator(basicSalary,benefits = 0) {
   let grossPay;
   grossPay = basicSalary + benefits
   console.log(`${grossPay} is the grossPay amount`)
@@ -85,13 +85,13 @@ function netSalaryCalculator(basicSalary,benefits=0) {
   let payeTierThree;
 
   payeTierOne = postNssf * 0.1;
-  console.log(`${payeTierOne} is first tax bracket amount`);
+  console.log(`${payeTierOne} is first tax bracket tax amount`);
   if (payeTierOne <= 2400) {
     tierOneRemainder = postNssf;
   } else {
-    tierOneRemainder = postNssf + 2400 - postNssf * 0.1;
+    tierOneRemainder = (postNssf + 2400 )- (postNssf * 0.1);
   }
-  console.log(`${} is the amount`);
+  console.log(`${tierOneRemainder} is the first tax bracket return amount`);
 
   if (postNssf >= 24001) {
      if(tierOneRemainder - 24000 <= 32333){
@@ -103,12 +103,15 @@ function netSalaryCalculator(basicSalary,benefits=0) {
    tierTwoRemainder = tierOneRemainder - payeTierTwo
 
      }
+     console.log(`${payeTierTwo} is the second tax bracket tax amount`)
+     console.log(`${tierTwoRemainder} is the second tax bracket return amount`)
    
   if (postNssf >= 32333)
   { payeTierThree = (tierTwoRemainder - 32333) * 0.3
     tierThreeRemainder = tierTwoRemainder - payeTierThree}
+    console.log(`${payeTierThree} is the  third tax bracket return amount`)
 
-  let postNHIF;
+
   let nhifDeduction
   if(grossPay <= 5999)
   {nhifDeduction = 150}
@@ -125,7 +128,7 @@ function netSalaryCalculator(basicSalary,benefits=0) {
    else if(grossPay <= 19999)
   {nhifDeduction = 600}
 
-   else if(grossPay <= 249999)
+   else if(grossPay <= 24999)
   {nhifDeduction = 750}
 
    else if(grossPay <= 29999)
@@ -171,9 +174,7 @@ function netSalaryCalculator(basicSalary,benefits=0) {
 
     if(postNssf >= 32334){netPay = Math.ceil(tierThreeRemainder - nhifDeduction)}
   
-  return netPay;
+  return `${netPay} is the netPay`;
   }
-  
-
-  return returnSelector();
+    return returnSelector();
   }
