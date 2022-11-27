@@ -105,6 +105,87 @@ function netSalaryCalculator(basicSalary,benefits=0) {
   { payeTierThree = (tierTwoRemainder - 32333) * 0.3
     tierThreeRemainder = tierTwoRemainder - payeTierThree}
 
+  let postNHIF;
+  let nhifDeduction
+  if(grossPay <= 5999)
+  {nhifDeduction = 150
+   postNHIF = - nhifDeduction}
+
+   else if(grossPay <= 7999)
+   {nhifDeduction = 300
+    postNHIF = - nhifDeduction}
+
+    else if(grossPay <= 11999)
+    {nhifDeduction = 400
+     postNHIF = - nhifDeduction}
+
+     else if(grossPay <= 14999)
+  {nhifDeduction = 500
+   postNHIF = - nhifDeduction}
+
+   else if(grossPay <= 19999)
+  {nhifDeduction = 600
+   postNHIF = - nhifDeduction}
+
+   else if(grossPay <= 249999)
+  {nhifDeduction = 750
+   postNHIF = - nhifDeduction}
+
+   else if(grossPay <= 29999)
+  {nhifDeduction = 850
+   postNHIF = - nhifDeduction}
+
+   else if(grossPay <= 34999)
+  {nhifDeduction = 900
+   postNHIF = - nhifDeduction}
+
+   else if(grossPay <= 39999)
+  {nhifDeduction = 950
+   postNHIF = - nhifDeduction}
+
+   else if(grossPay <= 44999)
+  {nhifDeduction = 1000
+   postNHIF = - nhifDeduction}
+
+   else if(grossPay <= 49999)
+  {nhifDeduction = 1100
+   postNHIF = - nhifDeduction}
+
+   else if(grossPay <= 59999)
+  {nhifDeduction = 1200
+   postNHIF = - nhifDeduction}
+
+   else if(grossPay <= 69999)
+  {nhifDeduction = 1300
+   postNHIF = - nhifDeduction}
+
+   else if(grossPay <= 79999)
+  {nhifDeduction = 1400
+   postNHIF = - nhifDeduction}
+
+   else if(grossPay <= 89999)
+  {nhifDeduction = 1500
+   postNHIF = - nhifDeduction}
+
+   else if(grossPay <= 99999)
+  {nhifDeduction = 1600
+   postNHIF = - nhifDeduction}
+
+   else if(grossPay > 100000)
+  {nhifDeduction = 1700
+   postNHIF = - nhifDeduction}
+
+  console.log(`${nhifDeduction} is the nhifDeduction`)
+
+
+
+
+
+
+
+
+
+
   function returnSelector() {
     if (postNssf <= 24000) return tierOneRemainder;
 
