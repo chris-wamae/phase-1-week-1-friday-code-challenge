@@ -30,3 +30,6 @@ To use the Net Salary Calculator call the function netSalaryCalculator and add t
 
 netSalaryCalculator(30000,4000)
 
+##### Author and License
+ Author: Christopher Wamae
+ License: Open source license
