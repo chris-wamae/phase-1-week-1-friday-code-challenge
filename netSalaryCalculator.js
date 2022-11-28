@@ -18,7 +18,7 @@ function netSalaryCalculator(basicSalary, benefits = 0)
   grossPay = (parseInt(basicSalary) + parseInt(benefits));
   console.log(`${grossPay} is the gross pay amount`);
 //This if else statement calclates the nssf amount and deducts it 
-//returning the remainder
+//returning the remainderfunction numbers(functionParameter)
   let nssfAmount;
   if (grossPay * 0.06 > 1080) {
     nssfAmount = 1080;
