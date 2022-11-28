@@ -2,14 +2,18 @@
 
 //This program takes in a score through the inputScore function and returns
 //a grade depending on the score
-
+const prompt = require("prompt-sync")()
+inputScore()
 function inputScore(studentScore)
 //This is a function that takes in a students score as an agrument and ensure
 //the score provided is valid 
-{
+{let studentScoreVar;
+   studentScoreVar = prompt("What is your score?")
+   studentScore = studentScoreVar
   if (studentScore >= 0 && studentScore <= 100) {
     return grader();
   } else {
+    console.log("Please input a valid score between 0 and 100")
     return "Please input a valid score between 0 and 100";
   }
 
@@ -28,7 +32,8 @@ function inputScore(studentScore)
     } else if (studentScore >= 80) {
       grade = "A";
     }
-
+    console.log(`For a score of ${studentScore}, your grade is ${grade}`)
     return `For a score of ${studentScore}, your grade is ${grade}`;
   }
 }
+
