@@ -1,14 +1,19 @@
 //Net Salary Calculator
 //This program takes in the basicSalary and benefits and returns the net salary 
 //after nssf,nhif and PAYE deductions.
-
+const prompt = require("prompt-sync")()
 
 function netSalaryCalculator(basicSalary, benefits = 0) 
 //This function takes in the salary and benefits as the arguments and calculates the
 //gross pay
-{
+{ let basicSalaryPrompt;
+  let benefitsPrompt;
+  basicSalaryPrompt = prompt("What is your basic salary?")
+  basicSalary = basicSalaryPrompt;
+  benefitsPrompt = prompt("Please enter your total benefits")
+  benefits = benefitsPrompt;
   let grossPay;
-  grossPay = basicSalary + benefits;
+  grossPay = (parseInt(basicSalary) + parseInt(benefits));
   console.log(`${grossPay} is the gross pay amount`);
 //This if else statement calclates the nssf amount and deducts it 
 //returning the remainder
@@ -119,5 +124,7 @@ function netSalaryCalculator(basicSalary, benefits = 0)
 
     return `${netPay} is the netPay`;
   }
+  console.log(returnSelector())
   return returnSelector();
 }
+netSalaryCalculator()
