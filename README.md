@@ -22,17 +22,12 @@ This program takes an input of basic salary as well as benefits and returns the 
 
 ### Program usage
 
-To use the Student Grade Generator call the function inputScore and add a score as the argument eg.
+To use the programs, make sure you have node installed, open up your terminal and use the command **node** followed by the file name for the program you wish to use eg.
+To use the net salary calculator, open the directory where the program is using the terminal and run the following command:
 
-inputScore(20)
+**node netSalaryCalculator.js** 
 
-To use the Speed Limit Detector call the function speedLimitDetector and add speed as the argument eg.
-
-speedLimitDetector(100)
-
-To use the Net Salary Calculator call the function netSalaryCalculator and add the basic salary plus the benefits eg.
-
-netSalaryCalculator(30000,4000)
+You will be prompted to give an input, press enter after giving the input and the program will run and return the result.
 
 ##### Author and License
 
