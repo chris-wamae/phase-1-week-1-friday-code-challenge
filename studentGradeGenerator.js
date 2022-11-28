@@ -2,7 +2,9 @@
 
 //This program takes in a score through the inputScore function and returns
 //a grade depending on the score
-const prompt = require("prompt-sync")()
+
+//Allow prompts to be added 
+const prompt = require("prompt-sync")({sigint:true})
 inputScore()
 function inputScore(studentScore)
 //This is a function that takes in a students score as an agrument and ensure

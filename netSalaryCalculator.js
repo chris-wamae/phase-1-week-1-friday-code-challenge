@@ -1,7 +1,9 @@
 //Net Salary Calculator
 //This program takes in the basicSalary and benefits and returns the net salary 
 //after nssf,nhif and PAYE deductions.
-const prompt = require("prompt-sync")()
+
+//Allows prompts to be added 
+const prompt = require("prompt-sync")({sigint:true})
 
 function netSalaryCalculator(basicSalary, benefits = 0) 
 //This function takes in the salary and benefits as the arguments and calculates the
