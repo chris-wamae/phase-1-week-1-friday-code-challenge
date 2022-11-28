@@ -38,4 +38,3 @@ function inputScore(studentScore)
     return `For a score of ${studentScore}, your grade is ${grade}`;
   }
 }
-

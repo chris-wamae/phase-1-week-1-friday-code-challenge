@@ -1,7 +1,6 @@
 # Introduction and content description
 
-This repository contains code for three Javascript programs contained in the
-index.js and also each program contained separately in the studentGradeGenerator.js file, speedLimitDetector.js file and the netSalaryCalculator.js file.
+This repository contains code for three Javascript programs contained separately in the studentGradeGenerator.js file, speedLimitDetector.js file and the netSalaryCalculator.js file.
 The first program is the Student Grade Generator, the second is the Speed Limit
 Detector and finally the Net Salary Calculator
 
