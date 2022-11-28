@@ -29,7 +29,7 @@ To use the net salary calculator, open the directory where the program is using 
 
 You will be prompted to give an input, press enter after giving the input and the program will run and return the result.
 
-##### Author and License
-
-Author: Christopher Wamae
+##### Author
+ Christopher Wamae
+#### License
 License: Open source license
