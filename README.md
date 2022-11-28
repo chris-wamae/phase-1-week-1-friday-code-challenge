@@ -25,7 +25,7 @@ This program takes an input of basic salary as well as benefits and returns the 
 To use the programs, make sure you have node installed, open up your terminal and use the command **node** followed by the file name for the program you wish to use eg.
 To use the net salary calculator, open the directory where the program is using the terminal and run the following command:
 
-**node netSalaryCalculator.js** 
+**$node netSalaryCalculator.js** 
 
 You will be prompted to give an input, press enter after giving the input and the program will run and return the result.
 
